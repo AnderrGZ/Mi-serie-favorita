@@ -3,75 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ejemplo de práctica de CSS para hacerlo en mi pagina.">
+    <meta name="description" content="Página dedicada a la serie La Casa de Papel.">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-
     <title>La Casa de Papel</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Estilos.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
 </head>
-<body>
-    <h1 class="archivo-black-regular">La Casa de Papel</h1>
+<body class="bg-secondary text-light">
 
-    <p><strong>Año de estreno:</strong> 2 de mayo de 2017</p>
-    <p><strong>País de origen:</strong> España</p>
-    <p><strong>Géneros:</strong> Drama, Suspenso, Crimen</p>
-    <p><strong>Creador:</strong> Alejandro Pina Calafi</p>
-    <p><strong>Dirigido por:</strong> Jesús Colmenar</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">La Casa de Papel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#sinopsis">Sinopsis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#temporadas">Temporadas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#personajes">Personajes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#trailer">Trailer</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <h2>Sinopsis</h2>
-    <p>Esta serie habla sobre una persona que creó un plan sobre cómo atracar el banco más seguro de España.</p>
+    <div class="container mt-5">
+        <h1 class="text-center archivo-black-regular">La Casa de Papel</h1>
+        <div class="mt-4">
+            <p><strong>Año de estreno:</strong> 2 de mayo de 2017</p>
+            <p><strong>País de origen:</strong> España</p>
+            <p><strong>Géneros:</strong> Drama, Suspenso, Crimen</p>
+            <p><strong>Creador:</strong> Alejandro Pina Calafi</p>
+            <p><strong>Dirigido por:</strong> Jesús Colmenar</p>
+        </div>
+        
+        <h2 id="sinopsis" class="mt-4 text-dark">Sinopsis</h2>
+        <p>La serie sigue a un grupo de delincuentes que, bajo la dirección de "El Profesor", planean y ejecutan un ambicioso atraco al Banco de España. Cada personaje tiene un nombre en clave basado en ciudades, lo que les otorga una identidad única y una historia personal que se desarrolla a lo largo de la serie.</p>
+        
+        <h2 id="temporadas" class="mt-4 text-dark">Temporadas y episodios</h2>
+        <ul class="list-group">
+            <li class="list-group-item text-dark">Temporada 1: 13 episodios</li>
+            <li class="list-group-item text-dark">Temporada 2: 9 episodios</li>
+            <li class="list-group-item text-dark">Temporada 3: 8 episodios</li>
+            <li class="list-group-item text-dark">Temporada 4: 8 episodios</li>
+            <li class="list-group-item text-dark">Temporada 5: 10 episodios</li>
+        </ul>
+        
+        <h2 class="mt-4">Poster promocional</h2>
+        <img src="https://moviepostermexico.com/cdn/shop/products/CPBerlin_1990x.jpg?v=1570708111" alt="Poster de La Casa de Papel" class="img-fluid rounded mx-auto d-block fade-transition">
+        
+        <h2 id="personajes" class="mt-4">Personajes principales</h2>
+        <table class="table table-bordered table-striped">
+            <thead class="bg-primary text-light">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Foto</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Berlin<br><small>Nombre real: Pedro Alonso</small></td>
+                    <td><img src="https://vignette.wikia.nocookie.net/la-casa-de-papel/images/f/f9/Berlin.jpg/revision/latest?cb=20180528081231&path-prefix=fr" alt="Berlín" class="img-fluid fade-transition" style="max-width: 200px;"></td>
+                    <td>Un estratega brillante, su liderazgo y carisma son fundamentales para la operación.</td>
+                </tr>
+                <tr>
+                    <td>Tokio<br><small>Nombre real: Úrsula Corberó</small></td>
+                    <td><img src="https://i.pinimg.com/originals/6c/15/46/6c1546624952d1aa023a5053870311ba.jpg" alt="Tokio" class="img-fluid fade-transition" style="max-width: 200px;"></td>
+                    <td>Narradora de la historia, es experta en estrategias y combate.</td>
+                </tr>
+                <tr>
+                    <td>Denver<br><small>Nombre real: Jaime Lorente</small></td>
+                    <td><img src="https://wallpapercave.com/wp/wp4543568.jpg" alt="Denver" class="img-fluid fade-transition" style="max-width: 200px;"></td>
+                    <td>Conocido por su risa, su valentía y lealtad lo convierten en un miembro clave del equipo.</td>
+                </tr>
+                <tr>
+                    <td>Naomi<br><small>Nombre real: Esther Acebo</small></td>
+                    <td><img src="https://weloversize.com/wp-content/uploads/2020/04/nairobi-la-casa-de-papel-1586173057.jpg" alt="Naomi" class="img-fluid fade-transition" style="max-width: 200px;"></td>
+                    <td>Es una experta en operaciones encubiertas y una de las aliadas más cercanas de El Profesor.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2 class="mt-4">Enlaces oficiales de la serie:</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="https://www.netflix.com/mx/title/80192098" target="_blank" class="btn-custom">Sitio oficial de la serie en Netflix</a></li>
+            <li class="list-group-item"><a href="https://x.com/lacasadepapel" target="_blank" class="btn-custom">Twitter de la serie</a></li>
+        </ul>
+        
+        <h2 id="trailer" class="mt-4">Trailer de la serie:</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lUc4lB0FcvA?si=2jkDNoU-xwd_D1aH" title="Trailer de La Casa de Papel" class="rounded mx-auto d-block" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
 
-    <h2>Temporadas y episodios</h2>
-    <ul>
-        <li>Temporada 1: 13 episodios</li>
-        <li>Temporada 2: 9 episodios</li>
-        <li>Temporada 3: 8 episodios</li>
-        <li>Temporada 4: 8 episodios</li>
-        <li>Temporada 5: 10 episodios</li>
-    </ul>
+    <footer class="bg-dark text-light text-center py-3 mt-4">
+        <p>&copy; 2024 La Casa de Papel. Todos los derechos reservados.</p>
+    </footer>
 
-    <h2>Poster promocional</h2>
-    <img src="https://moviepostermexico.com/cdn/shop/products/CPBerlin_1990x.jpg?v=1570708111" alt="Poster de La Casa de Papel" title="Poster de La Casa de Papel" width="500px">
-
-    <h2>Personajes principales</h2>
-    <table border="1">
-        <tr>
-            <th>Nombre</th>
-            <th>Foto</th>
-            <th>Descripción</th>
-        </tr>
-        <tr>
-            <td>Berlin<br><br>Nombre real: Pedro Alonso</td>
-            <td><img src="https://vignette.wikia.nocookie.net/la-casa-de-papel/images/f/f9/Berlin.jpg/revision/latest?cb=20180528081231&path-prefix=fr" alt="Berlín" title="Berlín" width="400px"></td>
-            <td>Es una persona muy ingeniosa en los atracos, líder de la operación dentro de la fábrica.</td>
-        </tr>
-        <tr>
-            <td>Tokio<br><br>Nombre real: Úrsula Corberó</td>
-            <td><img src="https://i.pinimg.com/originals/6c/15/46/6c1546624952d1aa023a5053870311ba.jpg" alt="Tokio" title="Tokio" width="400px"></td>
-            <td>Especialista en informática y hacker del equipo.</td>
-        </tr>
-        <tr>
-            <td>Denver<br><br>Nombre real: Jaime Lorente</td>
-            <td><img src="https://wallpapercave.com/wp/wp4543568.jpg" alt="Denver" title="Denver" width="400px"></td>
-            <td>Es uno de los miembros de los atracadores, apasionado y muy valiente.</td>
-        </tr>
-    </table>
-
-    <h2>Enlaces oficiales de la serie:</h2>
-    <ul>
-        <li><a href="https://www.netflix.com/mx/title/80192098" target="_blank">Sitio oficial de la serie en Netflix</a></li>
-        <li><a href="https://x.com/lacasadepapel" target="_blank">Twitter de la serie</a></li>
-    </ul>
-
-    <h2>Trailer de la serie:</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/lUc4lB0FcvA?si=2jkDNoU-xwd_D1aH" title="Trailer de La Casa de Papel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
