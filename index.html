@@ -11,6 +11,103 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Estilos.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .fade-transition {
+            transition: opacity 0.3s ease-in-out;
+        }
+        .btn-custom {
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #dc3545;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .btn-custom:hover {
+            background-color: #c82333;
+        }
+        .season-synopsis {
+            display: none;
+        }
+        .season-trailer {
+            display: none;
+        }
+        .season-header:hover .season-synopsis, 
+        .season-header:hover .season-trailer {
+            display: block;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .archivo-black-regular {
+            font-family: 'Archivo Black', sans-serif;
+            font-weight: 700;
+        }
+        a {
+            text-decoration: none;
+        }
+        .btn-custom {
+            background-color: var(--color-primario);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #a93226;
+        }
+        a:hover {
+            color: #cd6155; 
+        }
+        .table th, .table td {
+            border: 1px solid var(--color-borde);
+            padding: 10px;
+            text-align: left;
+        }
+        .table th {
+            background-color: var(--color-primario);
+        }
+        .fade-transition {
+            transition: opacity 0.5s ease;
+        }
+        .fade-transition:hover {
+            opacity: 0.7;
+        }
+        :root {
+            --color-primario: #3e5b73;
+            --color-secundario: #333333; 
+            --color-texto-claro: #f5f5f5; 
+            --color-borde: #f5f5f5; 
+        }
+        .bg-secondary {
+            background-color: #2c3e50;
+        }
+        .text-light {
+            color: #ecf0f;
+        }
+        .list-group-item {
+            background-color: #34495e;
+        }
+        .list-group-item:hover {
+            background-color: #3e5b73;
+        }
+        .news-header:hover .news-detail {
+            display: block;
+        }
+        .news-detail {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .navbar-nav {
+                text-align: center;
+            }
+            .container {
+                margin-top: 30px;
+            }
+        }
+    </style>
 </head>
 <body class="bg-secondary text-light">
 
@@ -22,13 +119,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
+                    <a class="nav-link" href="#bienvenida">Bienvenida</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#sinopsis">Sinopsis</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#temporadas">Temporadas</a>
+                    <a class="nav-link" href="#Temporadas">Temporadas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#personajes">Personajes</a>
+                    <a class="nav-link" href="#galeria">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#noticias">Noticias</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#trailer">Trailer</a>
@@ -38,75 +141,159 @@
     </nav>
 
     <div class="container mt-5">
-        <h1 class="text-center archivo-black-regular">La Casa de Papel</h1>
-        <div class="mt-4">
-            <p><strong>Año de estreno:</strong> 2 de mayo de 2017</p>
-            <p><strong>País de origen:</strong> España</p>
-            <p><strong>Géneros:</strong> Drama, Suspenso, Crimen</p>
-            <p><strong>Creador:</strong> Alejandro Pina Calafi</p>
-            <p><strong>Dirigido por:</strong> Jesús Colmenar</p>
+        <section id="bienvenida">
+            <h1 class="text-center archivo-black-regular">La Casa de Papel</h1>
+            <div class="text-center mt-4">
+                <p><strong>Año de estreno:</strong> 2 de mayo de 2017</p>
+                <p><strong>País de origen:</strong> España</p>
+                <p><strong>Géneros:</strong> Drama, Suspenso, Crimen</p>
+                <p><strong>Creador:</strong> Álex Pina</p>
+                <p><strong>Dirigido por:</strong> Jesús Colmenar</p>
+            </div>
+        </section>
+
+        <h2 id="sinopsis" class="mt-4 text-dark">Sinopsis</h2>
+        <p>La serie sigue a un grupo de criminales dirigidos por "El Profesor", quien orquesta un ambicioso atraco al Banco de España. Cada miembro del equipo lleva el nombre de una ciudad, lo que les da una identidad única. El plan busca robar una gran cantidad de oro almacenada en la institución, pero el atraco se convierte en una carrera contra el tiempo, enfrentando tanto a los delincuentes como a la policía. A lo largo de la serie, se exploran las motivaciones y pasados de los personajes, mientras lidian con tensiones internas, traiciones y dilemas morales.</p>
+
+        <h2 id="Temporadas" class="mt-4 text-dark">Sinopsis</h2>
+        <div class="list-group-item season-header" onmouseover="expandSeason(this)" onmouseout="collapseSeason(this)" style="background-color: #34495e; color: black;">
+            <h3>Temporada 1: 13 episodios</h3>
+            <div class="season-synopsis">
+                <p>La primera temporada sigue a los atracadores mientras se infiltran en la Real Casa de la Moneda de España, con el objetivo de imprimir 2.4 mil millones de euros. A lo largo de esta temporada, se desarrollan las personalidades de los criminales y de los negociadores de la policía.</p>
+            </div>
+            <div class="season-trailer">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/G7w7aN4_vG0?si=x3VIe8mfDkZBnyCL" title="Trailer Temporada 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
         
-        <h2 id="sinopsis" class="mt-4 text-dark">Sinopsis</h2>
-        <p>La serie sigue a un grupo de delincuentes que, bajo la dirección de "El Profesor", planean y ejecutan un ambicioso atraco al Banco de España. Cada personaje tiene un nombre en clave basado en ciudades, lo que les otorga una identidad única y una historia personal que se desarrolla a lo largo de la serie.</p>
+        <div class="list-group-item season-header" onmouseover="expandSeason(this)" onmouseout="collapseSeason(this)" style="background-color: #34495e; color: black;">
+            <h3>Temporada 2: 9 episodios</h3>
+            <div class="season-synopsis">
+                <p>La segunda temporada se intensifica con el robo en su fase final. Mientras tanto, las tensiones aumentan, con traiciones entre los propios miembros del grupo. Las fuerzas de seguridad comienzan a entender mejor los métodos del Profesor.</p>
+            </div>
+            <div class="season-trailer">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nJ0Jik9Tokk?si=VdaUI2yVGGgGqaI0" title="Trailer Temporada 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
         
-        <h2 id="temporadas" class="mt-4 text-dark">Temporadas y episodios</h2>
+        <div class="list-group-item season-header" onmouseover="expandSeason(this)" onmouseout="collapseSeason(this)" style="background-color: #34495e; color: black;">
+            <h3>Temporada 3: 8 episodios</h3>
+            <div class="season-synopsis">
+                <p>Con el dinero del atraco al Banco de España en su poder, los protagonistas deciden llevar a cabo otro golpe. Esta vez, el objetivo es robar una gran cantidad de oro almacenada en el Banco de España.</p>
+            </div>
+            <div class="season-trailer">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xQ3XC81uxLQ?si=gEyOrePqxohiddCy" title="Trailer Temporada 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="list-group-item season-header" onmouseover="expandSeason(this)" onmouseout="collapseSeason(this)" style="background-color: #34495e; color: black;">
+            <h3>Temporada 4: 8 episodios</h3>
+            <div class="season-synopsis">
+                <p>La tensión en el Banco de España alcanza su punto máximo, con los atracadores enfrentándose a situaciones extremas. El equipo comienza a romperse mientras intentan mantener el control del botín.</p>
+            </div>
+            <div class="season-trailer">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/w1jkStuRQU8?si=Rp_4JVW-qh65S_LH" title="Trailer Temporada 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="list-group-item season-header" onmouseover="expandSeason(this)" onmouseout="collapseSeason(this)" style="background-color: #34495e; color: black;">
+            <h3>Temporada 5: 10 episodios</h3>
+            <div class="season-synopsis">
+                <p>En la última temporada, los atracadores luchan por salvar sus vidas y completar su misión, mientras el Profesor y su equipo enfrentan desafíos aún mayores que pondrán a prueba su lealtad.</p>
+            </div>
+            <div class="season-trailer">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6UMmM_XmFVg?si=6ahJ7TDkqsyhAbWk&amp;start=1" title="Trailer Temporada 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+
+<style>
+    .season-header {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .season-header h3 {
+        margin: 0;
+    }
+
+    .season-synopsis, .season-trailer {
+        display: none;
+    }
+
+    .season-header:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
+
+    .season-header.expanded .season-synopsis, 
+    .season-header.expanded .season-trailer {
+        display: block;
+    }
+</style>
+
+<script>
+    function expandSeason(element) {
+        element.classList.add('expanded');
+    }
+
+    function collapseSeason(element) {
+        element.classList.remove('expanded');
+    }
+</script>
+
+        <h2 id="galeria" class="mt-4 text-dark">Galería de imágenes</h2>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <img src="https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/nos-gusta/los-escenarios-de-rodaje-de-la-serie-la-casa-de-papel/gr-cms-media-featured_images-2254-5d0af4cb-f4be-446a-a5ce-d98c1e4cc028-la-casa-de-papel.jpg.transform/rp-rendition-xs/image.jpg" alt="Imagen 1" class="img-fluid rounded fade-transition">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/07/12223932/La-casa-de-Papel.jpg" alt="Imagen 2" class="img-fluid rounded fade-transition">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/la-casa-de-papel-temporada-5-parte-2-1631536750.jpeg" alt="Imagen 3" class="img-fluid rounded fade-transition">
+            </div>
+        </div>
+
+        <h2 id="noticias" class="mt-4 text-dark">Noticias y actualizaciones</h2>
         <ul class="list-group">
-            <li class="list-group-item text-dark">Temporada 1: 13 episodios</li>
-            <li class="list-group-item text-dark">Temporada 2: 9 episodios</li>
-            <li class="list-group-item text-dark">Temporada 3: 8 episodios</li>
-            <li class="list-group-item text-dark">Temporada 4: 8 episodios</li>
-            <li class="list-group-item text-dark">Temporada 5: 10 episodios</li>
+            <li class="list-group-item news-header">
+                Nueva temporada confirmada para 2025
+                <div class="news-detail">
+                    <p>'La casa de papel: Berlín', temporada 2: posible fecha de estreno y argumento del spin-off de Netflix
+                     
+                    </p>
+                    <p>Según <a href="https://www.esquire.com/es/actualidad/tv/a46241178/la-casa-de-papel-berlin-temporada-2-fecha-argumento-reparto/" target="_blank">Esquire</a>, Berlín regresará en la segunda temporada de la serie.</p>
+                </div>
+            </li>
+            <li class="list-group-item news-header">
+                Estate informado
+                <div class="news-detail">
+                 
+                    <a href="https://www.instagram.com/lacasadepapeltv/?hl=es-la" class="btn btn-primary" target="_blank">Visita nuestra página</a>
+                </div>
+            </li>
+            
+            </li>
+            <li class="list-group-item news-header">
+                Nuestro X
+                <div class="news-detail">
+                   
+                    <a href="https://x.com/lacasadepapel" class="btn btn-primary" target="_blank">X</a>
+                </div>
+            </li>
+            
         </ul>
-        
-        <h2 class="mt-4">Poster promocional</h2>
-        <img src="https://moviepostermexico.com/cdn/shop/products/CPBerlin_1990x.jpg?v=1570708111" alt="Poster de La Casa de Papel" class="img-fluid rounded mx-auto d-block fade-transition">
-        
-        <h2 id="personajes" class="mt-4">Personajes principales</h2>
-        <table class="table table-bordered table-striped">
-            <thead class="bg-primary text-light">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Foto</th>
-                    <th>Descripción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Berlin<br><small>Nombre real: Pedro Alonso</small></td>
-                    <td><img src="https://vignette.wikia.nocookie.net/la-casa-de-papel/images/f/f9/Berlin.jpg/revision/latest?cb=20180528081231&path-prefix=fr" alt="Berlín" class="img-fluid fade-transition" style="max-width: 200px;"></td>
-                    <td>Un estratega brillante, su liderazgo y carisma son fundamentales para la operación.</td>
-                </tr>
-                <tr>
-                    <td>Tokio<br><small>Nombre real: Úrsula Corberó</small></td>
-                    <td><img src="https://i.pinimg.com/originals/6c/15/46/6c1546624952d1aa023a5053870311ba.jpg" alt="Tokio" class="img-fluid fade-transition" style="max-width: 200px;"></td>
-                    <td>Narradora de la historia, es experta en estrategias y combate.</td>
-                </tr>
-                <tr>
-                    <td>Denver<br><small>Nombre real: Jaime Lorente</small></td>
-                    <td><img src="https://wallpapercave.com/wp/wp4543568.jpg" alt="Denver" class="img-fluid fade-transition" style="max-width: 200px;"></td>
-                    <td>Conocido por su risa, su valentía y lealtad lo convierten en un miembro clave del equipo.</td>
-                </tr>
-                <tr>
-                    <td>Naomi<br><small>Nombre real: Esther Acebo</small></td>
-                    <td><img src="https://weloversize.com/wp-content/uploads/2020/04/nairobi-la-casa-de-papel-1586173057.jpg" alt="Naomi" class="img-fluid fade-transition" style="max-width: 200px;"></td>
-                    <td>Es una experta en operaciones encubiertas y una de las aliadas más cercanas de El Profesor.</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <h2 class="mt-4">Enlaces oficiales de la serie:</h2>
-        <ul class="list-group">
-            <li class="list-group-item"><a href="https://www.netflix.com/mx/title/80192098" target="_blank" class="btn-custom">Sitio oficial de la serie en Netflix</a></li>
-            <li class="list-group-item"><a href="https://x.com/lacasadepapel" target="_blank" class="btn-custom">Twitter de la serie</a></li>
-        </ul>
-        
-        <h2 id="trailer" class="mt-4">Trailer de la serie:</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/lUc4lB0FcvA?si=2jkDNoU-xwd_D1aH" title="Trailer de La Casa de Papel" class="rounded mx-auto d-block" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <h2 id="trailer" class="mt-4 text-dark">Trailer de la serie</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lUc4lB0FcvA" title="Trailer de La Casa de Papel" class="rounded mx-auto d-block" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <footer class="bg-dark text-light text-center py-3 mt-4">
         <p>&copy; 2024 La Casa de Papel. Todos los derechos reservados.</p>
+        <p>Síguenos en: <a href="https://www.netflix.com/mx/title/80192098" target="_blank" class="btn-custom">Netflix</a> | <a href="https://x.com/lacasadepapel" target="_blank" class="btn-custom">Twitter</a></p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
